@@ -4,7 +4,7 @@
     "http://www.hibernate.org/dtd/hibernate-configuration-3.0.dtd">
 <hibernate-configuration>
   <session-factory>
-    <property name="connection.url">jdbc:mysql://reveur.me:3306</property>
+    <property name="connection.url">jdbc:mysql://localhost:3306</property>
     <property name="connection.driver_class">com.mysql.jdbc.Driver</property>
     <mapping class="Eneity.IntelAlertEntity"/>
     <mapping class="Eneity.IntelDataEntity"/>
@@ -15,7 +15,6 @@
 
     <!-- DB schema will be updated if needed -->
     <!-- <property name="hbm2ddl.auto">update</property> -->
-
 
   </session-factory>
 </hibernate-configuration>

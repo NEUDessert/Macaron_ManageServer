@@ -204,7 +204,9 @@ public class UserDAO implements IUserDAO{
                 for (int i = 0; i < strings.size(); i++) {
                     Log log = new Log();
                     log.setAlertId((Integer)strings.get(i)[0]+"");
-                    log.setOccurTime((String)strings.get(i)[1]);
+                    GetCurrentTime getTime = GetCurrentTime.singleGetCurrentTime();
+                    String time = getTime.getTime((Long)strings.get(i)[1]);
+                    log.setOccurTime((time));
                     log.setDeviceName(username + "-" + strings.get(i)[2]);
                     log.setDeviceLocate((String)strings.get(i)[3]);
                     log.setIsChecked((Integer)strings.get(i)[4]+"");

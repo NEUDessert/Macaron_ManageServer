@@ -13,7 +13,7 @@ public class IntelAlertEntity {
     private int deviceid;
     private int sensorid;
     private int alerttype;
-    private int alerttime;
+    private long alerttime;
     private int ischeck;
 
     @Id
@@ -68,11 +68,11 @@ public class IntelAlertEntity {
 
     @Basic
     @Column(name = "alerttime")
-    public int getAlerttime() {
+    public long getAlerttime() {
         return alerttime;
     }
 
-    public void setAlerttime(int alerttime) {
+    public void setAlerttime(long alerttime) {
         this.alerttime = alerttime;
     }
 
@@ -111,7 +111,6 @@ public class IntelAlertEntity {
         result = 31 * result + deviceid;
         result = 31 * result + sensorid;
         result = 31 * result + alerttype;
-        result = 31 * result + alerttime;
         result = 31 * result + ischeck;
         return result;
     }

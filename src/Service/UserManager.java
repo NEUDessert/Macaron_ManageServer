@@ -18,7 +18,7 @@ import org.hibernate.Session;
  */
 public class UserManager implements IUserManager{
 
-    String alertType[] = {"燃气报警","烟雾报警","","","","",""};
+    String alertType[] = {"燃气报警","烟雾报警","防盗报警","","","",""};
 
     private IUserDAO userDAO;
 
